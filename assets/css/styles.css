@@ -2,11 +2,256 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #ffb900;
+    --font-heading: Sen, ans-serif;
+}
+
 html {
-    font-size: 62,5%;
+    font-size: 62, 5%;
 }
 
 body {
     font-size: 1.6rem;
-    font-family: "Poppins"
+    font-family: "Poppins", sans-serif;
+}
+
+/* common */
+
+a {
+    text-decoration: none;
+}
+.btn {
+    background: #171100;
+    padding: 0 16px;
+    text-align: center;
+    line-height: 50px;
+    min-width: 118px;
+    display: inline-block;
+    border-radius: 999px;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header */
+
+.header {
+    background-color: #fffcf4;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 1;
+}
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav a {
+    position: relative;
+    color: #5f5b53;
+    padding: 8px 21px;
+    font-size: 16px;
+}
+.nav a:hover,
+.nav li.active a {
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+.nav li.active a::after {
+    content: "";
+    left: 21px;
+    bottom: 6px;
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
+}
+
+.header .sign-up-btn {
+    min-width: 144px;
+}
+
+.action {
+    margin-left: 49px;
+}
+
+/* Hero */
+
+.hero {
+    padding-top: 56px;
+    background: #fffcf4;
+}
+
+.hero .body {
+    display: flex;
+}
+
+/* Hero left */
+
+.hero .media-block {
+    position: relative;
+    width: 48%;
+}
+
+.hero .media-block .img {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero .hero-sumary {
+    position: absolute;
+    padding: 28px 24px;
+    right: 0;
+    bottom: 48px;
+    width: 270px;
+    background: white;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.hero-sumary .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff9e8;
+}
+
+.hero-sumary .info {
+    margin-left: 16px;
+}
+.hero-sumary .item:nth-of-type(2) .icon {
+    background: #fcefff;
+}
+
+.hero-sumary .item:nth-of-type(3) .icon {
+    background: #ebeaff;
+}
+
+.hero-sumary .item {
+    display: flex;
+}
+
+.hero-sumary .item + .item {
+    margin-top: 22px;
+}
+
+.hero-sumary .label {
+    color: #5f5b53;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.hero-sumary .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+/* Hero right */
+
+.hero .content-block {
+    width: 52%;
+    padding: 64px 0 63px 130px;
+}
+
+.hero .heading {
+    font-family: var(--font-heading);
+    color: #171100;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 68px;
+    letter-spacing: -0.02em;
+}
+
+.hero .desc {
+    margin-top: 22px;
+    color: #5f5b53;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.hero .cta-group {
+    display: flex;
+    align-items: center;
+    margin: 38px 0 48px;
+}
+
+.hero-cta {
+    font-size: 18px;
+    min-width: 180px;
+    line-height: 64px;
+    background: var(--primary);
+}
+
+.hero .watch-video {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    border: none;
+    background: transparent;
+}
+
+.hero .watch-video .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+    border-radius: 9999px;
+}
+.hero .watch-video span {
+    color: #171100;
+    margin-left: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+.hero .stats {
+    margin-left: -28px;
+}
+
+.hero .stats strong {
+    padding: 0 8px 0 28px;
+    font-family: var(--font-heading);
+    color: #171100;
+    line-height: 54px;
+    font-size: 44px;
+    font-weight: 700;
 }
